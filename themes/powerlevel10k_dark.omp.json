@@ -69,15 +69,18 @@
         {
           "type": "cmake",
           "style": "plain",
+          "home_enabled": true,
           // "powerline_symbol": "",
           "foreground": "#1E9748",
-          "template": "   cmake {{ .Full }} "
+          "template": "   cmake {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
         }
       ],
       "type": "prompt"
     },
     {
       "alignment": "right",
+      "overflow": "hide",
+      "filler": "{{ if .Overflow }} {{ else }}<#585858>-</>{{ end }}",
       "segments": [
         {
           "background": "#303030",
@@ -147,5 +150,14 @@
     }
   ],
   "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+  "shell_integration": true,
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground_templates": [
+      "{{ if gt .Code 0 }}#5fd700{{else}}#ff0000{{ end }}"
+    ],
+    "template": "❯ "
+  },
+  "patch_pwsh_bleed": true,
   "version": 3
 }

@@ -153,9 +153,9 @@
   "shell_integration": true,
   "transient_prompt": {
     "background": "transparent",
-    "foreground": "#ffffff",
+    "foreground": "#5fd700",
     "foreground_templates": [
-      "{{ if gt .Code 0 }}#5fd700{{else}}#ff0000{{ end }}"
+      "{{ if gt .Code 0 }}#ff0000{{ end }}"
     ],
     "template": "❯ "
   },

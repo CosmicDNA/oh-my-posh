@@ -153,8 +153,9 @@
   "shell_integration": true,
   "transient_prompt": {
     "background": "transparent",
+    "foreground": "#ff0000",
     "foreground_templates": [
-      "{{ if gt .Code 0 }}#5fd700{{else}}#ff0000{{ end }}"
+      "{{ if gt .Code 0 }}#5fd700{{ end }}"
     ],
     "template": "❯ "
   },
